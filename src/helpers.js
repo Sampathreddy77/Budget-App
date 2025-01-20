@@ -84,11 +84,10 @@ export const formatPercentage = (amt) => {
     minimumFractionDigits: 0,
   });
 };
-
-// Format currency
+// Formatting currency
 export const formatCurrency = (amt) => {
   return amt.toLocaleString(undefined, {
     style: "currency",
-    currency: "USD",
+    currency: "inr",
   });
 };
