@@ -1,16 +1,24 @@
-import { redirect } from "react-router";
+// rrd imports
+import { redirect } from "react-router-dom";
+
+// library
+import { toast } from "react-toastify";
 
 // helpers
 import { deleteItem } from "../helpers";
-import { toast } from "react-toastify";
 
-export async function logoutAction(params) {
-  //delete user
+export async function logoutAction() {
+  // delete the user
   deleteItem({
-    key: "username",
+    key: "userName",
   });
-  toast.success("You've Successfully deleted your Account")
-
-  //return redirect
+  deleteItem({
+    key: "budgets",
+  });
+  deleteItem({
+    key: "expenses",
+  });
+  toast.success("You’ve deleted your account!");
+  // return redirect
   return redirect("/");
 }
