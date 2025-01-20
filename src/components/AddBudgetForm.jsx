@@ -46,7 +46,7 @@ const AddBudgetForm = () => {
           />
         </div>
 
-        <input type="hidden" name="_action" value="CreateBudget" />
+        <input type="hidden" name="_action" value="createBudget" />
 
         <button type="submit" className="btn btn--dark" disabled={isSubmitting}>
           {
